@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#1a1a2e">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+        android:background="#0f3460" android:orientation="horizontal"
+        android:padding="6dp" android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="🪑 BUSY TABLES"
+            android:textColor="#ffffff" android:textSize="16sp" android:textStyle="bold"/>
+        <Button android:id="@+id/btn_refresh2" android:layout_width="46dp" android:layout_height="38dp"
+            android:text="🔄" android:textColor="#ffffff" android:backgroundTint="#2980b9" android:textSize="16sp"/>
+        <Button android:id="@+id/btn_back2" android:layout_width="70dp" android:layout_height="38dp"
+            android:text="← Back" android:textColor="#ffffff" android:backgroundTint="#555555"
+            android:textSize="12sp" android:layout_marginStart="4dp"/>
+    </LinearLayout>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="80dp"
+        android:background="#0a0a1a">
+        <LinearLayout android:id="@+id/tables_bar2" android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:orientation="horizontal" android:padding="6dp"/>
+    </HorizontalScrollView>
+    <TextView android:id="@+id/tv_detail" android:layout_width="match_parent"
+        android:layout_height="36dp" android:text="Select a table"
+        android:textColor="#4fc3f7" android:textSize="15sp" android:textStyle="bold"
+        android:gravity="center"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:id="@+id/items_list" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:padding="8dp"/>
+    </ScrollView>
+    <TextView android:id="@+id/tv_total2" android:layout_width="match_parent"
+        android:layout_height="32dp" android:textColor="#f1c40f" android:textSize="14sp"
+        android:textStyle="bold" android:gravity="center"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="54dp"
+        android:orientation="horizontal" android:padding="4dp" android:background="#0f3460">
+        <Button android:id="@+id/btn_del_item" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:text="🗑 Delete Item" android:textColor="#ffffff"
+            android:backgroundTint="#c0392b" android:textSize="12sp" android:layout_marginEnd="3dp"/>
+        <Button android:id="@+id/btn_add_item2" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:text="+ Add Item" android:textColor="#ffffff"
+            android:backgroundTint="#2980b9" android:textSize="12sp" android:layout_marginEnd="3dp"/>
+        <Button android:id="@+id/btn_bill2" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:text="🧾 Bill" android:textColor="#ffffff"
+            android:backgroundTint="#e67e22" android:textSize="12sp"/>
+    </LinearLayout>
+</LinearLayout>

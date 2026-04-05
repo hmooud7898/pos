@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#1a1a2e">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+        android:background="#0f3460" android:orientation="horizontal"
+        android:padding="6dp" android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="⚙ SETTINGS"
+            android:textColor="#ffffff" android:textSize="16sp" android:textStyle="bold"/>
+        <Button android:id="@+id/btn_back_settings" android:layout_width="70dp"
+            android:layout_height="38dp" android:text="← Back"
+            android:textColor="#ffffff" android:backgroundTint="#555555" android:textSize="12sp"/>
+    </LinearLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/settings_tabs"
+        android:layout_width="match_parent" android:layout_height="46dp"
+        android:background="#0a0a1a"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+            <!-- General -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="── General ──" android:textColor="#4fc3f7"
+                android:textSize="14sp" android:textStyle="bold" android:paddingBottom="8dp"/>
+            <LinearLayout android:id="@+id/general_box" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"/>
+            <!-- Printers -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="── Printers ──" android:textColor="#4fc3f7"
+                android:textSize="14sp" android:textStyle="bold"
+                android:paddingTop="16dp" android:paddingBottom="8dp"/>
+            <LinearLayout android:id="@+id/printers_box" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"/>
+            <!-- Dishes -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="── Dishes ──" android:textColor="#4fc3f7"
+                android:textSize="14sp" android:textStyle="bold"
+                android:paddingTop="16dp" android:paddingBottom="8dp"/>
+            <LinearLayout android:id="@+id/dishes_box" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"/>
+            <!-- Print Size -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="── Print Size ──" android:textColor="#4fc3f7"
+                android:textSize="14sp" android:textStyle="bold"
+                android:paddingTop="16dp" android:paddingBottom="8dp"/>
+            <LinearLayout android:id="@+id/printsize_box" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

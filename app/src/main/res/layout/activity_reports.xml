@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#1a1a2e">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+        android:background="#0f3460" android:orientation="horizontal"
+        android:padding="6dp" android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="📊 REPORTS"
+            android:textColor="#ffffff" android:textSize="16sp" android:textStyle="bold"/>
+        <Button android:id="@+id/btn_back_reports" android:layout_width="70dp"
+            android:layout_height="38dp" android:text="← Back"
+            android:textColor="#ffffff" android:backgroundTint="#555555" android:textSize="12sp"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tv_grand" android:layout_width="match_parent"
+        android:layout_height="34dp" android:textColor="#f1c40f"
+        android:textSize="13sp" android:textStyle="bold" android:gravity="center"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp"
+        android:orientation="horizontal" android:padding="4dp" android:background="#0a0a1a">
+        <Button android:id="@+id/btn_today_txt" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:text="📅 Today TXT" android:textColor="#ffffff"
+            android:backgroundTint="#2980b9" android:textSize="12sp" android:layout_marginEnd="3dp"/>
+        <Button android:id="@+id/btn_month_txt" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:text="📆 Month TXT" android:textColor="#ffffff"
+            android:backgroundTint="#2980b9" android:textSize="12sp" android:layout_marginEnd="3dp"/>
+        <Button android:id="@+id/btn_clear_records" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:text="🗑 Clear" android:textColor="#ffffff"
+            android:backgroundTint="#e67e22" android:textSize="12sp"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:id="@+id/report_list" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"
+            android:padding="8dp"/>
+    </ScrollView>
+</LinearLayout>

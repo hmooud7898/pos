@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/accent"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:text="🍽 POS"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:text="TABLE:"
+            android:textColor="#cccccc"
+            android:textSize="11sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/et_table"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:background="@color/bg_dark2"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:inputType="number"
+            android:imeOptions="actionGo"
+            android:padding="4dp"
+            android:hint="201"
+            android:textColorHint="#666"
+            android:layout_marginStart="4dp"/>
+
+        <Button
+            android:id="@+id/btn_go"
+            android:layout_width="44dp"
+            android:layout_height="36dp"
+            android:text="GO"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:padding="2dp"
+            android:layout_marginStart="4dp"/>
+
+        <TextView
+            android:text="SRV:"
+            android:textColor="#cccccc"
+            android:textSize="11sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"/>
+
+        <EditText
+            android:id="@+id/et_server"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@color/bg_dark2"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:padding="4dp"
+            android:layout_marginStart="4dp"/>
+
+        <Button
+            android:id="@+id/btn_settings"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:text="⚙"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@color/gray"
+            android:padding="2dp"
+            android:layout_marginStart="4dp"/>
+
+        <Button
+            android:id="@+id/btn_tables"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:text="🪑"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@color/orange"
+            android:padding="2dp"
+            android:layout_marginStart="3dp"/>
+
+        <Button
+            android:id="@+id/btn_reports"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:text="📊"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="#16a085"
+            android:padding="2dp"
+            android:layout_marginStart="3dp"/>
+
+    </LinearLayout>
+
+    <!-- TABLES BAR -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/bg_dark2"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/tables_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:gravity="center_vertical"/>
+
+    </HorizontalScrollView>
+
+    <!-- MAIN BODY -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- LEFT: Categories + Dishes -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/bg_dark2">
+
+            <!-- Category tabs -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/category_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="4dp"
+                    android:gravity="center_vertical"/>
+
+            </HorizontalScrollView>
+
+            <!-- Dish grid -->
+            <GridView
+                android:id="@+id/dish_grid"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:numColumns="3"
+                android:verticalSpacing="4dp"
+                android:horizontalSpacing="4dp"
+                android:padding="4dp"
+                android:stretchMode="columnWidth"/>
+
+        </LinearLayout>
+
+        <!-- RIGHT: Order Panel -->
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/bg_dark"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/tv_table_info"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:text="No table"
+                android:textColor="#4fc3f7"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <ScrollView
+                android:id="@+id/order_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/order_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="2dp"/>
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="LL: 0"
+                android:textColor="@color/gold"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <!-- Action Buttons -->
+            <Button
+                android:id="@+id/btn_kitchen"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🍳 SEND KITCHEN"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:background="@color/green"
+                android:layout_marginTop="3dp"/>
+
+            <Button
+                android:id="@+id/btn_bill"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🧾 BILL"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:background="@color/orange"
+                android:layout_marginTop="3dp"/>
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="🗑 CLEAR PENDING"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:background="@color/dark_red"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tap item to remove | Hold BILL = direct print"
+                android:textColor="@color/gray"
+                android:textSize="9sp"
+                android:gravity="center"
+                android:layout_marginTop="3dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
