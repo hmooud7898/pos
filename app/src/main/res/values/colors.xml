@@ -1,16 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="bg_dark">#121212</color>
-    <color name="bg_dark2">#1E1E1E</color>
-    <color name="accent">#FF4081</color>
-    <color name="blue">#2196F3</color>
-    <color name="gray">#9E9E9E</color>
-    <color name="orange">#FF9800</color>
-    <color name="gold">#FFD700</color>
-    <color name="green">#4CAF50</color>
-    <color name="dark_red">#B71C1C</color>
     <color name="colorPrimary">#0f3460</color>
     <color name="colorPrimaryDark">#1a1a2e</color>
     <color name="colorAccent">#e94560</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bg_dark">#1a1a2e</color>
+    <color name="bg_medium">#16213e</color>
+    <color name="btn_green">#27ae60</color>
+    <color name="btn_red">#c0392b</color>
+    <color name="btn_orange">#e67e22</color>
+    <color name="btn_blue">#2980b9</color>
+    <color name="text_gold">#f1c40f</color>
+    <color name="text_lime">#2ecc71</color>
+    <color name="text_gray">#aaaaaa</color>
 </resources>
